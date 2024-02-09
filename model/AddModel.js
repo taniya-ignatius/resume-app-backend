@@ -1,0 +1,47 @@
+const mongoose=require("mongoose")
+const addSchema= new mongoose.Schema(
+    {
+        userid:{
+            type:mongoose.Schema.Types.ObjectId,
+            required:true,
+            ref:"users"
+        },
+        profile:{
+            type:String,
+            required:true
+        },
+        Skill:{
+            type:String,
+            required:true
+        },
+        Education:{
+            type:String,
+            required:true
+        },
+        Certifications:{
+            type:String,
+            required:true
+        },
+        Achievements:{
+            type:String,
+            required:true
+        },
+        Workexperience:{
+            type:String,
+            required:true
+        },
+        Project:{
+            type:String,
+            required:true
+        },
+        Language:{
+            type:String,
+            required:true
+        },
+        postedDate:{
+            type:Date,
+            default:Date.now
+        }
+    }
+)
+module.exports=mongoose.model("resume",addSchema)
