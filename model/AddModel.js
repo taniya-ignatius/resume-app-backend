@@ -4,7 +4,7 @@ const addSchema= new mongoose.Schema(
         userid:{
             type:mongoose.Schema.Types.ObjectId,
             required:true,
-            ref:"blogs"
+            ref:"users"
         },
         profile:{
             type:String,
